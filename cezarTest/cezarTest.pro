@@ -16,5 +16,7 @@ TEMPLATE = app
 
 
 SOURCES += \
-    tst_cezar.cpp
+    tst_cezar.cpp \
+    ../Cezar.cpp
+
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
