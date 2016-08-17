@@ -1,11 +1,13 @@
 #pragma once
 
+#include <string>
+
 class Cezar
 {
 public:
 	Cezar();
 	~Cezar();
-	string szyfruj(const string &in);
-	string deszyfruj(const string &in);
+    std::string szyfruj(const std::string &in);
+    std::string deszyfruj(const std::string &in);
 };
 
