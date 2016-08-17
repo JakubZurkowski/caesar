@@ -1,11 +1,11 @@
 #pragma once
+
 class Cezar
 {
 public:
 	Cezar();
 	~Cezar();
-	void start();
-	void szyfruj(char tab[]);
-	void deszyfruj(char tab[]);
+	string szyfruj(const string &in);
+	string deszyfruj(const string &in);
 };
 
