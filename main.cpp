@@ -1,8 +1,16 @@
 #include <iostream>
 #include <string>
+#include <stdio.h>
 #include "Cezar.h"
 
 using namespace std;
+
+void czekajNaEnter()
+{
+    int c;
+    cout << "Wcisnij ENTER by kontynuowac..." << endl << flush;
+    do {c = getchar();  cout << "znak" << c;} while ((c != '\n') && (c != EOF));
+}
 
 int main() {
 	string word;
@@ -20,6 +28,7 @@ int main() {
 	cout << "Rozszyfrowany tekst: " << word << endl;
 
 	cout << "\n\n\n";
-	system("pause");
+
+    czekajNaEnter();
 	return 0;
 }
