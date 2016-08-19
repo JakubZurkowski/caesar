@@ -17,6 +17,7 @@ Cezar::~Cezar()
 
 string Cezar::szyfruj(const string &in) {
 	string out;
+    out.reserve(in.capacity());
 	//cout << "\n\nPo zaszyfrowaniu: " << endl;
 
 	for (int i = 0; i < in.length(); i++) {
@@ -29,7 +30,7 @@ string Cezar::szyfruj(const string &in) {
 
 string Cezar::deszyfruj(const string &in) {
 	string out;
-
+    out.reserve(in.capacity());
 	//cout << "\n\nPo rozszyfrowaniu: " << endl;
 
 	for (int i = 0; i < in.length(); i++) {
