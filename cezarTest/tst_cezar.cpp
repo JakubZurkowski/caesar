@@ -17,6 +17,9 @@ private Q_SLOTS:
     // metoda uruchamiana po wszystkich przypadkach testowych
     void cleanupTestCase();
 
+    //weryfikacja dlugosci stringa
+    void testCase();
+
     // serie danych do przypadku testowego
     void testSzyfruj_data();
     // przypadek testowy 1
@@ -24,6 +27,7 @@ private Q_SLOTS:
 
 private:
     Cezar *cezar = nullptr;
+
 };
 
 // kod dostosowania std::string do potrzeb QtTest
@@ -50,6 +54,12 @@ void CezarTest::initTestCase()
 void CezarTest::cleanupTestCase()
 {
     delete cezar;
+}
+
+void CezarTest::testCase()
+{
+    std::string s;
+    QCOMPARE(s.size(),4294967291);
 }
 
 void CezarTest::testSzyfruj_data()
