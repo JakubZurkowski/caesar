@@ -59,7 +59,7 @@ void CezarTest::cleanupTestCase()
 void CezarTest::testCase()
 {
     std::string s;
-    QCOMPARE(s.size(),4294967291);
+    QCOMPARE(s.size(),4294967291ul);
 }
 
 void CezarTest::testSzyfruj_data()
