@@ -16,27 +16,25 @@ Cezar::~Cezar()
 
 
 string Cezar::szyfruj(const string &in) {
-	string out;
-    out.reserve(in.capacity());
-	//cout << "\n\nPo zaszyfrowaniu: " << endl;
+    string out = "" ;
+    out.reserve(in.length());
+    int length = in.length();
+    for (int i = 0; i < length; i++) {
 
-	for (int i = 0; i < in.length(); i++) {
-		if (in[i] + 13 > 'Z') out[i] =in[i] - 13;
-		else out[i] = in[i] + 13;
-		//cout << out[i] << endl;
-	}
-	return out;
+        if (in[i] + 13 > 'Z') out += (in[i] - 13);
+        else out += (in[i]+13);
+        cout << out[i] << endl;
+    }
+    return out;
 }
 
 string Cezar::deszyfruj(const string &in) {
-	string out;
-    out.reserve(in.capacity());
-	//cout << "\n\nPo rozszyfrowaniu: " << endl;
+    string out="";
 
-	for (int i = 0; i < in.length(); i++) {
-		if (in[i] - 13 > 'A') out[i] = in[i] + 13;
-		else out[i] = in[i] - 13;
-		//cout << out[i] << endl;
-	}
-	return out;
+    int lenght = in.length();
+    for (int i = 0; i < lenght; i++) {
+        if (in[i] - 13 > 'A') out += (in[i] + 13);
+        else out += (in[i] - 13);
+    }
+    return out;
 }
